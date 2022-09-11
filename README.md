@@ -1,5 +1,7 @@
 # Smart Thermostat based on ESP-01 board
 
+![ESP-01 Relay module](/docs/ESP-01_relay.jpg)
+
 The software to run on the thermostat to control temperature in the
 room with a floor heating.
 
