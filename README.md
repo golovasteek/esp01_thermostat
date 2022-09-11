@@ -1,5 +1,3 @@
-View this project on [CADLAB.io](https://cadlab.io/project/25945). 
-
 # Smart Thermostat based on ESP-01 board
 
 ![ESP-01 Relay module](/docs/ESP-01_relay.jpg)
