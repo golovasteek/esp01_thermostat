@@ -1,0 +1,457 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:DS18B20 U1
+U 1 1 630D28D6
+P 6550 4550
+F 0 "U1" H 6320 4596 50  0000 R CNN
+F 1 "DS18B20" H 6320 4505 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5550 4300 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 6400 4800 50  0001 C CNN
+	1    6550 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Converter_ACDC:HLK-PM01 PS1
+U 1 1 630D3FA0
+P 4050 1800
+F 0 "PS1" H 4050 2125 50  0000 C CNN
+F 1 "HLK-PM01" H 4050 2034 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 4050 1500 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 4450 1450 50  0001 C CNN
+	1    4050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 630D5B2F
+P 2950 2250
+F 0 "J2" H 2950 2050 50  0000 C CNN
+F 1 "WallConnection" H 3100 2450 50  0000 C CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00233_1x03_P5.08mm_Horizontal" H 2950 2250 50  0001 C CNN
+F 3 "~" H 2950 2250 50  0001 C CNN
+	1    2950 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 630DBB5E
+P 2950 1800
+F 0 "J1" H 2868 1475 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2868 1566 50  0000 C CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00232_1x02_P5.08mm_Horizontal" H 2950 1800 50  0001 C CNN
+F 3 "~" H 2950 1800 50  0001 C CNN
+	1    2950 1800
+	-1   0    0    1   
+$EndComp
+Text Label 3150 2150 0    50   ~ 0
+L
+Text Label 3150 2250 0    50   ~ 0
+N
+Text Label 3150 2350 0    50   ~ 0
+Out
+Wire Wire Line
+	3150 2150 3150 1800
+$Comp
+L Device:Fuse_Thermal F1
+U 1 1 630EE152
+P 2350 1750
+F 0 "F1" H 2200 1800 50  0000 L CNN
+F 1 "Fuse_Thermal" H 1800 1750 50  0000 L CNN
+F 2 "" V 2280 1750 50  0001 C CNN
+F 3 "~" H 2350 1750 50  0001 C CNN
+	1    2350 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1600 2550 1600
+Wire Wire Line
+	2550 1600 2550 1700
+Wire Wire Line
+	2350 1900 2550 1900
+Wire Wire Line
+	2550 1900 2550 1800
+Wire Wire Line
+	2550 1800 2650 1800
+Wire Wire Line
+	2550 1700 2650 1700
+NoConn ~ 2650 1700
+NoConn ~ 2650 1800
+$Comp
+L Device:Fuse F2
+U 1 1 630D7801
+P 3300 1700
+F 0 "F2" V 3103 1700 50  0000 C CNN
+F 1 "Fuse" V 3194 1700 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Clip_5x20_ESKA" V 3230 1700 50  0001 C CNN
+F 3 "~" H 3300 1700 50  0001 C CNN
+	1    3300 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 2250 3650 2250
+$Comp
+L Device:Polyfuse_Small F3
+U 1 1 630F36B6
+P 4550 1700
+F 0 "F3" V 4345 1700 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4436 1700 50  0000 C CNN
+F 2 "Fuse:Fuse_Bourns_MF-RG500" H 4600 1500 50  0001 L CNN
+F 3 "~" H 4550 1700 50  0001 C CNN
+	1    4550 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 630F3F25
+P 4450 1900
+F 0 "#PWR06" H 4450 1650 50  0001 C CNN
+F 1 "GND" H 4455 1727 50  0000 C CNN
+F 2 "" H 4450 1900 50  0001 C CNN
+F 3 "" H 4450 1900 50  0001 C CNN
+	1    4450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 630F49DC
+P 4000 4600
+F 0 "#PWR04" H 4000 4350 50  0001 C CNN
+F 1 "GND" H 4005 4427 50  0000 C CNN
+F 2 "" H 4000 4600 50  0001 C CNN
+F 3 "" H 4000 4600 50  0001 C CNN
+	1    4000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 630F520B
+P 4000 3700
+F 0 "#PWR03" H 4000 3550 50  0001 C CNN
+F 1 "+3.3V" H 4150 3800 50  0000 C CNN
+F 2 "" H 4000 3700 50  0001 C CNN
+F 3 "" H 4000 3700 50  0001 C CNN
+	1    4000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2350 3150 3150
+Wire Wire Line
+	3150 3150 3800 3150
+Wire Wire Line
+	3800 3150 3800 3000
+Wire Wire Line
+	3900 2150 3900 2400
+$Comp
+L power:+5V #PWR05
+U 1 1 630F9BA4
+P 4300 2400
+F 0 "#PWR05" H 4300 2250 50  0001 C CNN
+F 1 "+5V" H 4315 2573 50  0000 C CNN
+F 2 "" H 4300 2400 50  0001 C CNN
+F 3 "" H 4300 2400 50  0001 C CNN
+	1    4300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 630FBA1D
+P 5050 4000
+F 0 "Q1" H 5241 4046 50  0000 L CNN
+F 1 "BC847" H 5241 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5250 3925 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 5050 4000 50  0001 L CNN
+	1    5050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 63104354
+P 4700 4000
+F 0 "R2" V 4907 4000 50  0000 C CNN
+F 1 "4K7" V 4816 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4630 4000 50  0001 C CNN
+F 3 "~" H 4700 4000 50  0001 C CNN
+	1    4700 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 63105526
+P 5150 4200
+F 0 "#PWR09" H 5150 3950 50  0001 C CNN
+F 1 "GND" H 5155 4027 50  0000 C CNN
+F 2 "" H 5150 4200 50  0001 C CNN
+F 3 "" H 5150 4200 50  0001 C CNN
+	1    5150 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3000 5150 3000
+$Comp
+L power:GND #PWR02
+U 1 1 6310A577
+P 6550 4850
+F 0 "#PWR02" H 6550 4600 50  0001 C CNN
+F 1 "GND" H 6555 4677 50  0000 C CNN
+F 2 "" H 6550 4850 50  0001 C CNN
+F 3 "" H 6550 4850 50  0001 C CNN
+	1    6550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6310AD92
+P 6000 4400
+F 0 "R1" H 6070 4446 50  0000 L CNN
+F 1 "2K2" H 6070 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5930 4400 50  0001 C CNN
+F 3 "~" H 6000 4400 50  0001 C CNN
+	1    6000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR07
+U 1 1 6310C20E
+P 6000 4250
+F 0 "#PWR07" H 6000 4100 50  0001 C CNN
+F 1 "+3.3V" H 6015 4423 50  0000 C CNN
+F 2 "" H 6000 4250 50  0001 C CNN
+F 3 "" H 6000 4250 50  0001 C CNN
+	1    6000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 6310C73F
+P 6550 4250
+F 0 "#PWR01" H 6550 4100 50  0001 C CNN
+F 1 "+5V" H 6565 4423 50  0000 C CNN
+F 2 "" H 6550 4250 50  0001 C CNN
+F 3 "" H 6550 4250 50  0001 C CNN
+	1    6550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4000 4550 4000
+$Comp
+L power:+5V #PWR08
+U 1 1 6311E1C5
+P 5050 1700
+F 0 "#PWR08" H 5050 1550 50  0001 C CNN
+F 1 "+5V" H 5065 1873 50  0000 C CNN
+F 2 "" H 5050 1700 50  0001 C CNN
+F 3 "" H 5050 1700 50  0001 C CNN
+	1    5050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM1117-3.3 U3
+U 1 1 6311EA55
+P 5600 1700
+F 0 "U3" H 5600 1942 50  0000 C CNN
+F 1 "LM1117-3.3" H 5600 1851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 5600 1700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 5600 1700 50  0001 C CNN
+	1    5600 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1700 5050 1700
+Connection ~ 5050 1700
+$Comp
+L power:GND #PWR010
+U 1 1 6311FDD9
+P 5600 2000
+F 0 "#PWR010" H 5600 1750 50  0001 C CNN
+F 1 "GND" H 5605 1827 50  0000 C CNN
+F 2 "" H 5600 2000 50  0001 C CNN
+F 3 "" H 5600 2000 50  0001 C CNN
+	1    5600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR011
+U 1 1 63120822
+P 6000 1700
+F 0 "#PWR011" H 6000 1550 50  0001 C CNN
+F 1 "+3.3V" H 6015 1873 50  0000 C CNN
+F 2 "" H 6000 1700 50  0001 C CNN
+F 3 "" H 6000 1700 50  0001 C CNN
+	1    6000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-36.11 K1
+U 1 1 63148DB5
+P 4100 2700
+F 0 "K1" H 3670 2654 50  0000 R CNN
+F 1 "FINDER-36.11" H 3670 2745 50  0000 R CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 5370 2670 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 4100 2700 50  0001 C CNN
+	1    4100 2700
+	-1   0    0    1   
+$EndComp
+NoConn ~ 4000 3000
+NoConn ~ 3550 4200
+NoConn ~ 3550 4100
+NoConn ~ 3550 4000
+NoConn ~ 4450 4200
+$Comp
+L Device:C_Polarized_Small C1
+U 1 1 6315D04B
+P 5050 1800
+F 0 "C1" H 5138 1846 50  0000 L CNN
+F 1 "1uF" H 5138 1755 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder" H 5050 1800 50  0001 C CNN
+F 3 "~" H 5050 1800 50  0001 C CNN
+	1    5050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Polarized_Small C2
+U 1 1 6315D72E
+P 6000 1800
+F 0 "C2" H 6088 1846 50  0000 L CNN
+F 1 "1uF" H 6088 1755 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_Pad1.50x2.35mm_HandSolder" H 6000 1800 50  0001 C CNN
+F 3 "~" H 6000 1800 50  0001 C CNN
+	1    6000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1700 6000 1700
+Connection ~ 6000 1700
+$Comp
+L power:GND #PWR013
+U 1 1 6315F22B
+P 6000 1900
+F 0 "#PWR013" H 6000 1650 50  0001 C CNN
+F 1 "GND" H 6005 1727 50  0000 C CNN
+F 2 "" H 6000 1900 50  0001 C CNN
+F 3 "" H 6000 1900 50  0001 C CNN
+	1    6000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 6315F698
+P 5050 1900
+F 0 "#PWR012" H 5050 1650 50  0001 C CNN
+F 1 "GND" H 5055 1727 50  0000 C CNN
+F 2 "" H 5050 1900 50  0001 C CNN
+F 3 "" H 5050 1900 50  0001 C CNN
+	1    5050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6316FA10
+P 7350 1150
+F 0 "H1" H 7450 1196 50  0000 L CNN
+F 1 "MountingHole" H 7450 1105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6mm" H 7350 1150 50  0001 C CNN
+F 3 "~" H 7350 1150 50  0001 C CNN
+	1    7350 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6316FF46
+P 7350 1400
+F 0 "H2" H 7450 1446 50  0000 L CNN
+F 1 "MountingHole" H 7450 1355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_6mm" H 7350 1400 50  0001 C CNN
+F 3 "~" H 7350 1400 50  0001 C CNN
+	1    7350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 631703C0
+P 7350 1650
+F 0 "H3" H 7450 1696 50  0000 L CNN
+F 1 "MountingHole" H 7450 1605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7350 1650 50  0001 C CNN
+F 3 "~" H 7350 1650 50  0001 C CNN
+	1    7350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 631708D2
+P 7350 1900
+F 0 "H4" H 7450 1946 50  0000 L CNN
+F 1 "MountingHole" H 7450 1855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7350 1900 50  0001 C CNN
+F 3 "~" H 7350 1900 50  0001 C CNN
+	1    7350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 63170DEF
+P 7350 2150
+F 0 "H5" H 7450 2196 50  0000 L CNN
+F 1 "MountingHole" H 7450 2105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7350 2150 50  0001 C CNN
+F 3 "~" H 7350 2150 50  0001 C CNN
+	1    7350 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 631710BB
+P 7350 2350
+F 0 "H6" H 7450 2396 50  0000 L CNN
+F 1 "MountingHole" H 7450 2305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7350 2350 50  0001 C CNN
+F 3 "~" H 7350 2350 50  0001 C CNN
+	1    7350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_Module:ESP-01 U2
+U 1 1 630D1C58
+P 4000 4100
+F 0 "U2" H 3700 4650 50  0000 C CNN
+F 1 "ESP-01" H 3700 4500 50  0000 C CNN
+F 2 "Connector_Samtec_HLE_THT:Samtec_HLE-104-02-xx-DV-TE_2x04_P2.54mm_Horizontal" H 4550 4450 50  0001 C CNN
+F 3 "" H 4550 4450 50  0001 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1700 3650 1700
+Connection ~ 3150 2150
+Wire Wire Line
+	5150 3000 5150 3800
+Wire Wire Line
+	4450 4100 4750 4100
+Wire Wire Line
+	4750 4100 4750 4550
+Wire Wire Line
+	4750 4550 6000 4550
+Connection ~ 6000 4550
+Wire Wire Line
+	6000 4550 6250 4550
+Wire Wire Line
+	5050 1700 5300 1700
+Wire Wire Line
+	3150 2150 3900 2150
+Wire Wire Line
+	3650 1900 3650 2250
+$EndSCHEMATC
